@@ -8,7 +8,8 @@ urlpatterns = [
     path('editar/<int:cliente_id>/', views.editar, name='editar'),
     path('salvar/', views.salvar, name='salvar'),
     path('deletar/<int:cliente_id>/', views.deletar, name='deletar'),
-    
+    path('login/', views.login, name='login'),
+    path('logar/', views.logar, name='logar'),
     #path('<int:cliente_id>/', views.adicionar, name='adicionar'),
     #path('<int:cliente_id>/results/', views.excluir, name='excluir'),
 ]

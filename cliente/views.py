@@ -3,10 +3,10 @@ from django.http import HttpResponse
 from .models import Cliente
 from django.http import HttpResponse
 from django.template import loader
-from django.utils import timezone
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from datetime import datetime
+from django.contrib.auth import authenticate
 
 def index(request):
     cliente_list = Cliente.objects.order_by('id')
@@ -48,3 +48,13 @@ def deletar(request, cliente_id):
         return HttpResponseRedirect(reverse('index'))        
     else:    
        return HttpResponseRedirect('/cliente/editar/%d/' % cliente_id) 
+
+def login(request):
+    return render(request, 'cliente/login.html')
+
+def logar(request):
+    user = authenticate(username=request.POST['username'], password=request.POST['password'])
+    if user is not None:
+        return HttpResponseRedirect(reverse('index')) 
+    else:
+        return HttpResponseRedirect(reverse('login')) 
