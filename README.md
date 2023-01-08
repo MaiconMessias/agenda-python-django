@@ -1,4 +1,4 @@
-# Contact Book with Django and Python
+# Contact Book with Django and Python (look the branch agenda1-1)
 
 Project created to implement an Contact Book with Django and Python
 Used the sqllite3 database
