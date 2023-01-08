@@ -1,0 +1,27 @@
+{% extends "./layout/basemain.html" %}
+
+{% block title %}Página Principal{% endblock %}
+    {% block content-header %}
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top border">
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="navbar-brand">Agenda</a>
+                    </li>    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pesquisas
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'pesquisacliente' %}">Cliente</a>
+                        </div>
+                    </li>            
+                </ul>
+                <form class="form-inline" action="{% url 'logout_view' %}">
+                    <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</button>
+                </form>
+            </div>    
+
+        </nav>    
+    {% endblock %}    
