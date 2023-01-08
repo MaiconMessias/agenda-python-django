@@ -21,6 +21,6 @@ Used the sqllite3 database
 
 ![Exclusion Page](img/Exclusion.PNG)
 
- - DB Browser for SQLite https://sqlitebrowser.org/
- - Django https://www.djangoproject.com/
- - Python https://www.python.org/ 
+- DB Browser for SQLite https://sqlitebrowser.org/
+- Django https://www.djangoproject.com/
+- Python https://www.python.org/ 
